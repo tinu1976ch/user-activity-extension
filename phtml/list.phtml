@@ -1,0 +1,16 @@
+<?php if (defined('AAM_USER_ACTIVITY')) { ?>
+    <div class="wrap">
+        <h2>User Activities <small><a href="https://aamplugin.com/help/how-to-track-any-wordpress-user-activity" target="_blank" class="page-title-action">Help</a></small></h2>
+
+        <?php $this->getTable()->prepare_items(); ?>
+
+        <form method="post">
+            <p class="search-box">
+                <label class="screen-reader-text" for="activity-search-input">Search:</label>
+                <input type="search" id="activity-search-input" name="s" value="<?php _admin_search_query(); ?>" placeholder="Search by user or hook" />
+                <?php submit_button('Search', '', '', false, array('id' => 'search-submit')); ?>
+            </p>
+            <?php $this->getTable()->display(); ?>
+        </form>
+    </div>
+<?php }
