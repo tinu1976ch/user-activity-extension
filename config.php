@@ -8,7 +8,7 @@
  */
 
 return array(
-    'version' => '1.4.1',
+    'version' => '1.4.2',
     'id'      => 'AAM_USER_ACTIVITY',
     'basedir' => dirname(__FILE__),
     'markups' => array(
@@ -21,5 +21,8 @@ return array(
         'term_browse' => 'Access denied to {$1.action} <b>{$1.term.name}</b> <small>(ID: {$1.term.term_id})</small>',
         'blog_access' => 'Access denied',
         'ip_access'   => 'Access denied for the IP {$1.target.ip}'
+    ),
+    'requires' => array(
+        'aam'  => '5.6.1.1'
     )
 );
